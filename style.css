@@ -1,0 +1,246 @@
+/*
+Theme Name: WP Quickstart
+*/
+
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+.slicknav_menu {display: none}
+a:hover { text-decoration: none }
+a:focus { outline: 0 solid; text-decoration: none}
+img {
+    max-width: 100%;
+    height: auto;
+}
+input:focus, button:focus, textarea:focus, a:focus {outline: none}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 700;
+}
+body {
+
+}
+
+/* nav item: navigation effect */
+.slicknav_nav ul li a {
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+}
+.slicknav_nav ul li a:before {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 50%;
+    color: transparent;
+    content: '\f1db';
+    font-family: 'FontAwesome';
+    text-shadow: 0 0 transparent;
+    font-size: 6px;
+    -webkit-transition: text-shadow 0.3s, color 0.3s;
+    -moz-transition: text-shadow 0.3s, color 0.3s;
+    transition: text-shadow 0.3s, color 0.3s;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+.slicknav_nav ul li a:hover,
+.slicknav_nav ul li a:focus {
+    text-decoration: none;
+    color: #ff832d;
+}
+.slicknav_nav ul li a:hover:before,
+.slicknav_nav ul li a:focus:before {
+    color: #fff;
+    text-shadow: 10px 0 #fff, -10px 0 #fff;
+}
+
+/* SlickNav Styling */
+.slicknav_menu {
+    display: none;
+    padding: 5px 10px;
+    background-color: #181810;
+}
+.slicknav_btn {
+    margin: 0;
+    padding-top: 15px;
+    padding-left: 2px;
+    background-color: transparent;
+}
+.slicknav_btn .slicknav_icon-bar+.slicknav_icon-bar {
+    margin-top: 0;
+}
+.slicknav_nav a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    font-family: 'Lato', sans-serif;
+    text-align: right;
+    font-size: 14px;
+    line-height: 26px;
+    position: relative;
+    overflow: hidden;
+}
+.slicknav_nav a:hover {
+    background: none;
+    border-radius: 0;
+    color: #fff;
+}
+.slicknav_nav a:hover,
+.slicknav_nav a:active,
+.slicknav_nav a:focus,
+.slicknav_nav a:visited {
+    outline: none;
+}
+.slicknav_brand {
+    max-width: 64px;
+    width: 100%;
+    padding: 0;
+    position: relative;
+}
+.slicknav_brand img {
+    max-width: 32px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+/* Hamburger Icon Cross */
+.slicknav_icon {
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+.slicknav_icon span {
+    display: block !important;
+    position: absolute !important;
+    height: 2px !important;
+    background: #d3531a !important;
+    border-radius: 9px !important;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+/* hamburger bars when clicked */
+
+.slicknav_icon span:nth-child(1) {
+    top: 1px;
+}
+.slicknav_icon span:nth-child(2) {
+    top: 7px;
+}
+.slicknav_icon span:nth-child(3) {
+    top: 13px;
+}
+
+/* hamburger bars when closed */
+.slicknav_open .slicknav_icon span:nth-child(1) {
+    top: 6px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+.slicknav_open .slicknav_icon span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+.slicknav_open .slicknav_icon span:nth-child(3) {
+    top: 6px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+/* Material Styling */
+.ink {
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 100%;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+.animate {
+    -webkit-animation: ripple 0.65s linear;
+    -moz-animation: ripple 0.65s linear;
+    -ms-animation: ripple 0.65s linear;
+    -o-animation: ripple 0.65s linear;
+    animation: ripple 0.65s linear;
+}
+@-webkit-keyframes ripple {
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(2.5);
+    }
+}
+@-moz-keyframes ripple {
+    100% {
+        opacity: 0;
+        -moz-transform: scale(2.5);
+    }
+}
+@-o-keyframes ripple {
+    100% {
+        opacity: 0;
+        -o-transform: scale(2.5);
+    }
+}
+@keyframes ripple {
+    100% {
+        opacity: 0;
+        transform: scale(2.5);
+    }
+}
+/* media query for showing slick navigation at 767px */
+
+@media (max-width: 767px) {
+    .slicknav_menu {
+        display: block;
+    }
+}
